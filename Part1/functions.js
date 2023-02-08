@@ -37,3 +37,10 @@ function fun2() {
   console.log(output);
 }
 
+//local scopes:
+function myLocalScope() {
+  let myVar=3;
+  console.log('inside myLocalScope', myVar);
+}
+myLocalScope();
+console.log('outside myLocalScope', myVar);
