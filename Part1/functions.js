@@ -44,3 +44,11 @@ function myLocalScope() {
 }
 myLocalScope();
 console.log('outside myLocalScope', myVar);
+
+//local scope to overried gloabl scope:
+const outerWear = "T-Shirt";
+function myOutfit() {
+  let outerWear = "sweater"
+  return outerWear;
+}
+myOutfit();
