@@ -26,6 +26,8 @@ myArray.push(["dog", 3]);
 
 //manipulate arrays with pop method:
 const myArray = [["John", 23], ["cat", 2]];
-
-// Only change code below this line
 const removedFromMyArray= myArray.pop()
+
+//manipulate arrasy with shift method:
+const myArray = [["John", 23], ["dog", 3]];
+const removedFromMyArray = myArray.shift();
