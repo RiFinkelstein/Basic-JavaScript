@@ -4,3 +4,9 @@ function reusableFunction(){
 }
 
 reusableFunction()
+
+//parameters in funtions:
+function functionWithArgs(x ,y){
+  console.log(x, y)
+}
+functionWithArgs(3 ,4)
