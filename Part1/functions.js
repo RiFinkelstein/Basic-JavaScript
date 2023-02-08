@@ -52,3 +52,29 @@ function myOutfit() {
   return outerWear;
 }
 myOutfit();
+
+//returning undefined value in function:
+// Setup
+let sum = 0;
+
+function addThree() {
+  sum = sum + 3;
+}
+
+
+function addFive(){
+  sum = sum+ 5;
+}
+
+addThree();
+addFive();
+
+
+//assignments with a returned value:
+let processed = 0;
+
+function processArg(num) {
+  return (num + 3) / 5;
+}
+
+processed = processArg(7);
