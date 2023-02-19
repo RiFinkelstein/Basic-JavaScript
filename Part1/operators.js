@@ -99,11 +99,11 @@ testLessThan(10);
 
 //<=
 function testLessOrEqual(val) {
-  if (val<=) {  
+  if (val<=12) {  
     return "Smaller Than or Equal to 12";
   }
 
-  if (val<=) {  
+  if (val<=24) {  
     return "Smaller Than or Equal to 24";
   }
 
