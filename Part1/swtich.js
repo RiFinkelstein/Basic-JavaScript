@@ -105,3 +105,13 @@ function isLess(a, b) {
   return a<b;
 }
 isLess(10, 15);
+
+// after terun code doesnt cont
+function abTest(a, b) {
+  if (a<0 || b<0){
+    return undefined
+  }
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+abTest(2,2);
