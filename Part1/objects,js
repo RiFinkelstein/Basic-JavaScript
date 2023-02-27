@@ -1,0 +1,7 @@
+//objects
+const myDog = {
+  "name": "clifard",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["people, bones"]
+};
