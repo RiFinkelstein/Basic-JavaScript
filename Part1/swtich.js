@@ -99,3 +99,9 @@ function chainToSwitch(val) {
 }
 
 chainToSwitch(7);
+
+//from if/else to function
+function isLess(a, b) {
+  return a<b;
+}
+isLess(10, 15);
