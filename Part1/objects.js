@@ -65,3 +65,19 @@ const myDog = {
 };
 
 delete myDog.tails;
+
+
+//using objects instead of elseif statements
+function phoneticLookup(val) {
+  var result = "";
+  var lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank"
+  };
+  result = lookup[val];
+  return result;
+}
