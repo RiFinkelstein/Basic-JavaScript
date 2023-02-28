@@ -81,3 +81,14 @@ function phoneticLookup(val) {
   result = lookup[val];
   return result;
 }
+
+//testing objects for properties
+function checkObj(obj, checkProp) {
+  
+  // Only change code below this line
+  if (obj.hasOwnProperty(checkProp)) {
+    return obj[checkProp];
+  } else {
+    return "Not Found";
+  }
+}
