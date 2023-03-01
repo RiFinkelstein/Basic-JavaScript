@@ -17,8 +17,12 @@ for (let i=1; i<=5; i++){
 //odd numbwer for loop
 // Setup
 const myArray = [];
-  
-// Only change code below this line
-for (let i = 1; i < 11; i += 2) {
+  for (let i = 1; i < 11; i += 2) {
+  myArray.push(i);
+}
+
+//backwords for loop
+const myArray = [];
+for (let i = 9; i > 0; i -= 2) {
   myArray.push(i);
 }
