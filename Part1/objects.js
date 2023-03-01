@@ -153,7 +153,6 @@ const myPlants = [
 const secondTree = myPlants[1].list[1];
 
 //record collection:
-// Setup
 const recordCollection = {
   2548: {
     albumTitle: 'Slippery When Wet',
@@ -183,10 +182,6 @@ function updateRecords(records, id, prop, value) {
   } else if (value === "") {
     delete records[id][prop];
   }
-  return records;
-}
-function updateRecords(records, id, prop, value) {
-  return records;
-}
+  return records;}
 
 updateRecords(recordCollection, 5439, 'artist', 'ABBA');
