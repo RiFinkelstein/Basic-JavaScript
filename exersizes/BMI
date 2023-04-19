@@ -1,0 +1,9 @@
+function calculateBMI(weight, height) {
+  let bmi = weight / (height * height);
+  return bmi;
+}
+
+let weight = 70; // Weight in kilograms
+let height = 1.75; // Height in meters
+let bmi = calculateBMI(weight, height); // Call the function to calculate BMI
+console.log("BMI: " + bmi.toFixed(2)); // Display the calculated BMI value
