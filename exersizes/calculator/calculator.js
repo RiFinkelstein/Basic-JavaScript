@@ -1,4 +1,5 @@
 // Calculator functions
+let history = [];
 function calculator() {
     // Get input values
     const num1 = parseFloat(document.getElementById("input1").value);
@@ -27,9 +28,11 @@ function calculator() {
         default:
             result = "Error: Invalid operator";
     }
-
-    // Display result
+    // Display result and add to history
+    const equation = `${num1} ${operator} ${num2} = ${result}`;
     document.getElementById("result").innerHTML = result;
+    history.push(equation);
+    document.getElementById("history").innerHTML = history.join("<br>");
 
 }
 // Clear input fields and result display
