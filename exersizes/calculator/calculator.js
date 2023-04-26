@@ -30,4 +30,10 @@ function calculator() {
 
     // Display result
     document.getElementById("result").innerHTML = result;
+
 }
+// Clear input fields and result display
+function clearCalculator() {
+    document.getElementById("input1").value = "";
+    document.getElementById("input2").value = "";
+    document.getElementById("result").innerHTML = "";}
