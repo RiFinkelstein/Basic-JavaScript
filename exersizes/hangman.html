@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman Game</title>
+</head>
+<body>
+
+	<h1>Hangman Game</h1>
+
+	<div id="word"></div>
+	<div id="letters"></div>
+	<div id="guesses"></div>
+
+	<script>
+
+		// Set up the game
+		const words = ['javascript', 'html', 'css', 'node', 'react'];
+		const word = words[Math.floor(Math.random() * words.length)];
+		const letters = 'abcdefghijklmnopqrstuvwxyz';
+		let guesses = 0;
+		let incorrect = 0;
+		let correct = 0;
+		let wordDisplay = '';
+		let lettersDisplay = '';
+
+		// Create the word display
+		for (let i = 0; i < word.length; i++) {
+			wordDisplay += '_ ';
+		}
+		document.getElementById('word').innerHTML = wordDisplay;
+
+		// Create the letter buttons
+		for (let i = 0; i < letters.length; i++) {
+			lettersDisplay += '<button id="' + letters[i] + '">' + letters[i] + '</button> ';
+		}
+		document.getElementById('letters').innerHTML = lettersDisplay;
+
+		// Add click listeners to the letter buttons
+		for (let i = 0; i < letters.length; i++) {
+			document.getElementById(letters[i]).addEventListener('click', function() {
+				let letter = letters[i];
+				if (word.indexOf(letter) !== -1) {
+					for (let j = 0; j < word.length; j++) {
+						if (word[j] === letter) {
+							wordDisplay = wordDisplay.substring(0, j * 2) + letter + wordDisplay.substring(j * 2 + 1);
+							correct++;
+						}
+					}
+					document.getElementById('word').innerHTML = wordDisplay;
+					if (correct === word.length) {
+						document.getElementById('guesses').innerHTML = 'You win!';
+					}
+				} else {
+					guesses++;
+					incorrect++;
+					document.getElementById(letter).disabled = true;
+					document.getElementById(letter).style.backgroundColor = 'red';
+					document.getElementById('guesses').innerHTML = 'Incorrect guesses: ' + incorrect;
+					if (guesses === 6) {
+						document.getElementById('word').innerHTML = word;
+						document.getElementById('guesses').innerHTML = 'You lose!';
+						for (let k = 0; k < letters.length; k++) {
+							document.getElementById(letters[k]).disabled = true;
+						}
+					}
+				}
+			});
+		}
+
+	</script>
+
+</body>
+</html>
