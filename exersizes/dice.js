@@ -1,7 +1,6 @@
 // Define the game variables
 let playerScore = 0;
 let computerScore = 0;
-let totalScore = playerScore + computerScore
 let round = 1;
 
 // Define the function to roll the dice
