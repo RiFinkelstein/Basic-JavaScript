@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mad Libs Game</title>
+  <script>
+    function generateStory() {
+      // Prompt the user for input
+      var adjective = prompt("Enter an adjective:");
+      var noun = prompt("Enter a noun:");
+      var verb = prompt("Enter a verb:");
+      var adverb = prompt("Enter an adverb:");
+
+      // Generate the story
+      var story = "The " + adjective + " " + noun + " " + verb + " " + adverb + ".";
+
+      // Display the story
+      document.getElementById("story").textContent = story;
+    }
+  </script>
+</head>
+<body>
+  <h1>Mad Libs Game</h1>
+  <button onclick="generateStory()">Generate Story</button>
+  <p id="story"></p>
+</body>
+</html>
