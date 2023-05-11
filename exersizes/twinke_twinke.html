@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #twinkle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  animation: twinkleAnimation 2s infinite;
+}
+
+@keyframes twinkleAnimation {
+  0% { color: yellow; }
+  50% { color: white; }
+  100% { color: yellow; }
+}
+body{
+    background-color: black;
+}
+
+  </style>
+  <script>document.addEventListener("DOMContentLoaded", function() {
+  var twinkleElement = document.getElementById("twinkle");
+
+  function toggleFontSize() {
+    twinkleElement.classList.toggle("enlarge");
+  }
+
+  setInterval(toggleFontSize, 1000);
+});
+</script>
+</head>
+<body>
+  <h1 id="twinkle">Twinkle Twinkle Little Star</h1>
+
+  <script src="script.js"></script>
+</body>
+</html>
