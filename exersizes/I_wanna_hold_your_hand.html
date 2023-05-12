@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #lyrics-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #song-lyrics {
+            text-align: center;
+            font-size: 24px;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="lyrics-container">
+        <h1 id="song-lyrics"></h1>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lyrics = [
+                "I wanna hold your hand",
+                "I wanna hold your hand",
+                "I wanna hold your hand",
+                "I wanna hold your hand"
+            ];
+
+            var songLyricsElement = document.getElementById("song-lyrics");
+
+            function displayLyrics() {
+                var currentIndex = 0;
+
+                function showNextLine() {
+                    if (currentIndex < lyrics.length) {
+                        songLyricsElement.innerHTML = lyrics[currentIndex];
+                        currentIndex++;
+
+                        // Animate the lyrics
+                        songLyricsElement.style.opacity = "1";
+                        setTimeout(hideLyrics, 1000);
+                    }
+                }
+
+                function hideLyrics() {
+                    songLyricsElement.style.opacity = "0";
+                    setTimeout(showNextLine, 1000);
+                }
+
+                showNextLine();
+            }
+
+            displayLyrics();
+        });
+    </script>
+</body>
+
+</html>
