@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <style>
     #lyrics-container {
@@ -9,22 +10,22 @@
       justify-content: center;
       height: 100vh;
     }
-    
+
     #song-lyrics {
       text-align: center;
       font-size: 24px;
       opacity: 0;
       transition: opacity 1s;
     }
-  </style>  
+  </style>
 </head>
+
 <body>
   <div id="lyrics-container">
     <h1 id="song-lyrics"></h1>
   </div>
-
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       var lyrics = [
         "Mary had a little lamb,",
         "Little lamb, little lamb,",
@@ -43,7 +44,7 @@
 
         function showNextLine() {
           if (currentIndex < lyrics.length) {
-            songLyricsElement.innerHTML += "<br>" + lyrics[currentIndex];
+            songLyricsElement.innerHTML = lyrics[currentIndex];
             currentIndex++;
           }
         }
@@ -54,5 +55,7 @@
       displayLyrics();
     });
   </script>
+
 </body>
+
 </html>
