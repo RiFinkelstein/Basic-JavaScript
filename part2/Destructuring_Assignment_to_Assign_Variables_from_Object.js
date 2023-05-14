@@ -5,5 +5,5 @@ const HIGH_TEMPERATURES = {
 };
 
 //this is reasignning the names of variables 
-const {today: highToday, tomorrow: highTomorrow} = HIGH_TEMPERATURES.today;
+const {today: highToday, tomorrow: highTomorrow} = HIGH_TEMPERATURES;
 
